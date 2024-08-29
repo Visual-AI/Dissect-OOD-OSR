@@ -1,0 +1,116 @@
+cifar-10:
+    conv-default:
+        epochs: 200
+        batch_size: 128
+        scheduler: 'cosine'
+        optim: 'sgd'
+        lr: 0.1 
+        weight_decay: 5.0e-4
+        is_nesterov: False
+        steps: ~
+        gamma: ~
+        rand_aug_m: ~
+        rand_aug_n: ~
+        label_smoothing: ~
+
+    closed:
+        epochs: 600
+        batch_size: 128
+        scheduler: 'cosine_warm_restarts_warmup'
+        optim: 'sgd'
+        lr: 0.1 
+        weight_decay: 1.0e-4
+        is_nesterov: False
+        steps: ~
+        gamma: ~
+        rand_aug_m: 6
+        rand_aug_n: 1
+        label_smoothing: ~
+
+    oe-default:
+        epochs: 100
+        batch_size: 128
+        scheduler: 'oe_opt'
+        optim: 'sgd'
+        lr: 0.1 
+        weight_decay: 5.0e-4
+        is_nesterov: True
+        steps: ~
+        gamma: ~
+        rand_aug_m: ~
+        rand_aug_n: ~
+        label_smoothing: ~
+
+
+cifar-100:
+    conv-default:
+        epochs: 200
+        batch_size: 128
+        scheduler: 'multi_step'
+        optim: 'sgd'
+        lr: 0.1 
+        weight_decay: 5.0e-4
+        is_nesterov: True
+        steps: [60, 120, 160]
+        gamma: 0.2
+        rand_aug_m: ~
+        rand_aug_n: ~
+        label_smoothing: ~
+
+    conv-cifar10-default:
+        epochs: 200
+        batch_size: 128
+        scheduler: 'cosine'
+        optim: 'sgd'
+        lr: 0.1 
+        weight_decay: 5.0e-4
+        is_nesterov: False
+        steps: ~
+        gamma: ~
+        rand_aug_m: ~
+        rand_aug_n: ~
+        label_smoothing: ~
+
+    closed:
+        epochs: 600
+        batch_size: 128
+        scheduler: 'cosine_warm_restarts_warmup'
+        optim: 'sgd'
+        lr: 0.1 
+        weight_decay: 1.0e-4
+        is_nesterov: False
+        steps: ~
+        gamma: ~
+        rand_aug_m: 6
+        rand_aug_n: 1
+        label_smoothing: ~
+
+    oe-default:
+        epochs: 100
+        batch_size: 128
+        scheduler: 'oe_opt'
+        optim: 'sgd'
+        lr: 0.1 
+        weight_decay: 5.0e-4
+        is_nesterov: True
+        steps: ~
+        gamma: ~
+        rand_aug_m: ~
+        rand_aug_n: ~
+        label_smoothing: ~
+
+
+tinyimagenet:
+    closed:
+        epochs: 600
+        batch_size: 128
+        scheduler: 'cosine_warm_restarts_warmup'
+        optim: 'adam'
+        lr: 0.001 
+        weight_decay: ~
+        is_nesterov: ~
+        steps: ~
+        gamma: ~
+        rand_aug_m: 9
+        rand_aug_n: 1
+        label_smoothing: 0.9
