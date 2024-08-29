@@ -85,7 +85,7 @@ By default, the sciprt will sweep all the scoring rules in `OOD_METHODS'.
 If you find this repo useful for your research, please consider citing our paper:
 
 ```bibtex
-@article{wang2024oodosr,
+@article{wang2024dissect,
     author    = {Wang, Hongjun and Vaze, Sagar and Han, Kai},
     title     = {Dissecting Out-of-Distribution Detection and Open-Set Recognition: A Critical Analysis of Methods and Benchmarks},
     journal = {International Journal of Computer Vision (IJCV)},
