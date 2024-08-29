@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://arxiv.org/abs/2403.13684"><img src="https://img.shields.io/badge/arXiv-2403.13684-b31b1b"></a>
-    <a href="https://visual-ai.github.io/sptnet/"><img src="https://img.shields.io/badge/Project-Website-blue"></a>
+    <a href="https://visual-ai.github.io/Dissect-OOD-OSR/"><img src="https://img.shields.io/badge/Project-Website-blue"></a>
     <a href="#jump"><img src="https://img.shields.io/badge/BibTeX-8A2BE2"></a>
 </p>
 
