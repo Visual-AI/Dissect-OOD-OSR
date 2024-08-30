@@ -82,7 +82,7 @@ bash bash_scripts/new_bash/eval/xxx.sh
 By default, the sciprt will sweep all the scoring rules in `OOD_METHODS'.
 
   
-## Citing this work
+## BibTex
 <span id="jump"></span>
 If you find this repo useful for your research, please consider citing our paper:
 
