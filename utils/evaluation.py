@@ -158,6 +158,33 @@ def compute_aurc(preds, labels, confidence):
 
     return aurc, e_aurc
 
+def compute_oaa(mixed_scores_arr, mixed_preds_arr, mixed_labels_arr, t, in_length):
+    in_scores, ood_scores = mixed_scores_arr[:in_length], mixed_scores_arr[in_length:]
+    in_preds, ood_preds = mixed_preds_arr[:in_length], mixed_preds_arr[in_length:]
+    in_labels_arr, ood_labels_arr = mixed_labels_arr[:in_length], mixed_labels_arr[in_length:]
+
+    # predicted ID
+    TN_index = in_scores <= t
+    FN_index = ood_scores <= t
+    TN_preds = in_preds[TN_index]
+    FN_preds = ood_preds[FN_index]
+    TN_labels = in_labels_arr[TN_index]
+    FN_labels = ood_labels_arr[FN_index]
+    rob_correct = (TN_preds == TN_labels).sum() + (FN_preds == FN_labels).sum()
+
+    # predicted OOD
+    TP_index = ood_scores > t
+    FP_index = in_scores > t 
+    TP_preds = ood_preds[TP_index]
+    FP_preds = in_preds[FP_index]
+    TP_labels = ood_labels_arr[TP_index]
+    FP_labels = in_labels_arr[FP_index]
+    det_correct = (TP_preds != TP_labels).sum() + (FP_preds != FP_labels).sum()
+
+    rob_cor_rate = rob_correct / (len(mixed_scores_arr))
+    det_cor_rate = det_correct / (len(mixed_scores_arr))
+
+    return rob_cor_rate, det_cor_rate
 
 def metric(closed_preds, closed_labels, open_preds, open_labels, mtypes=['AUROC']):
     results = dict()
