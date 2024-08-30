@@ -1,11 +1,11 @@
 # Dissecting Out-of-Distribution Detection and Open-Set Recognition: A Critical Analysis of Methods and Benchmarks (IJCV 2024)
 
 <p align="center">
-  <a href="https://whj363636.github.io/">Hongjun Wang<sup>1</sup></a>, 
-  <a href="https://sgvaze.github.io/">Sagar Vaze<sup>2</sup></a>, 
-  <a href="https://www.kaihan.org/">Kai Han<sup>1</sup></a> </br>
-<a href="https://visailab.github.io/index.html"><sup>1</sup>Visual AI Lab, The University of Hong Kong</a>
-<a href="https://www.robots.ox.ac.uk/~vgg/"><sup>2</sup>Visual Geometry Group, University of Oxford</a>
+  <a href="https://whj363636.github.io/">Hongjun Wang</a><sup>1</sup>, 
+  <a href="https://sgvaze.github.io/">Sagar Vaze</a><sup>2</sup>, 
+  <a href="https://www.kaihan.org/">Kai Han</a><sup>1</sup> </br>
+<sup>1</sup><a href="https://visailab.github.io/index.html">Visual AI Lab, The University of Hong Kong</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<sup>2</sup><a href="https://www.robots.ox.ac.uk/~vgg/">Visual Geometry Group, University of Oxford</a>
 </p>
 
 <p align="center">
@@ -21,7 +21,9 @@ Concretely, we make the following contributions:
 (iii) We surprisingly find that the best performing method on standard benchmarks (Outlier Exposure) struggles when tested at scale, while scoring rules which are sensitive to the deep feature magnitude consistently show promise;
 and (iv) We conduct empirical analysis to explain these phenomena and highlight directions for future research.*
 
-![teaser](assets/teaser.png)
+<p align="center">
+<img src="assets/teaser.png" width="500"/>
+</p>
 
 ## Running
 
